@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementsByTagName('form')[0],
         formTextArea = form.getElementsByTagName('textarea')[0],
         toDoList = document.getElementById('todo'),
@@ -34,4 +34,4 @@ window.onload = function() {
         createToDoElement(formTextArea.value);
         formTextArea.value = '';
     }, false);
-};
+}, false);
