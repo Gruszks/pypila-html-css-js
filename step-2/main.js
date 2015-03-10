@@ -14,9 +14,10 @@ function createToDoElement(text) {
  *   remove link - element should be removed from ToDo list
  *
  * @param {DOM Element} element ToDo item.
+ * @param {DOM Element} toDoList ToDo list DOM.
  * @param {DOM Element} doneList DOM element with done list.
  */
-function bindElementEvents(element, doneList) {
+function bindElementEvents(element, toDoList, doneList) {
     // TODO
 };
 
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         var newElement = createToDoElement(formTextArea.value);
-        bindElementEvents(newElement, doneList);
+        bindElementEvents(newElement, toDoList, doneList);
         toDoList.appendChild(newElement);
         formTextArea.value = '';
     }, false);
